@@ -24,6 +24,8 @@ sudo mv "/tmp/$newspark" "$SPARK2_DIR"
 
 
 # Create symlinks
+sudo ln -s "$SPARK2_DIR" \
+   "/usr/hdp/current/spark-client2"
 sudo ln -s "$SPARK2_DIR/yarn/spark-2.0.0-yarn-shuffle.jar" \
    "$HADOOP_DIR/lib/spark-yarn-shuffle.jar"
 sudo ln -s $HADOOP_DIR /usr/hdp/current/hadoop
