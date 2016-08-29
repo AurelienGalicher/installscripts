@@ -47,19 +47,14 @@
                 }]
             },
             "installScriptActions": [{
-                "name": "[concat('hue-install-v0','-' ,uniquestring(variables('applicationName')))]",
-                "uri": "https://raw.githubusercontent.com/hdinsight/Iaas-Applications/master/Hue/scripts/Hue-install_v0.sh",
-                "roles": ["edgenode"]
+                "name": "[concat('spark2.0-install-v0','-' ,uniquestring(variables('applicationName')))]",
+                "uri": "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/spark2.0-sidebyside-hdinsight.sh",
+                "roles": ["headnode","workernode","edgenode"]
             }],
-            "uninstallScriptActions": [],
-            "httpsEndpoints": [{
-                "subDomainSuffix": "hue",
-                "destinationPort": 8888,
-                "accessModes": ["webpage"]
-            },
-            {
-                "subDomainSuffix": "was",
-                "destinationPort": 50073
+            "uninstallScriptActions": [{
+                "name": "[concat('spark2.0-uninstall-v0','-' ,uniquestring(variables('applicationName')))]",
+                "uri": "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/uninstall-spark-sidebyside-hdinisght.sh",
+                "roles": ["headnode","workernode","edgenode"]
             }],
             "applicationType": "CustomApplication"
         }
