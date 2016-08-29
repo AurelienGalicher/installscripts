@@ -7,15 +7,15 @@ SPARK_CONF_DIR="$(readlink -f "/usr/hdp/current/spark-client/conf")"
 CURRENT_DIR=${SPARK_DIR%/spark}
 HADOOP_DIR="$CURRENT_DIR/hadoop"
 HADOOP_YARN_DIR="$CURRENT_DIR/hadoop-yarn"
-$SPARK2_DIR="$CURRENT_DIR/spark-client2"
+SPARK2_DIR="$CURRENT_DIR/spark-client2"
 
 ## Download & Install Binary
 cd "/tmp"
 curl "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz" | tar xzf -
 cd "$newspark"
-rm -r "jars/hadoop"* 
+rm "jars/hadoop*" 
 sudo mkdir $SPARK2_DIR 
-mv "$newspark" "$SPARK2_DIR"
+sudo mv "$newspark" "$SPARK2_DIR"
 
 
 # Create symlinks
