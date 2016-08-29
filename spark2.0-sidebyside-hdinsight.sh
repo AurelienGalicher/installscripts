@@ -11,8 +11,8 @@ SPARK2_DIR="$CURRENT_DIR/spark-client2"
 
 ## Download & Install Binary
 cd "/tmp"
-rm -r $newspark.tgz
-rm -r $newspark
+sudo rm -r $newspark.tgz
+sudo rm -r $newspark
 wget "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz"
 tar -xvf $newspark.tgz
 cd "$newspark"
