@@ -13,7 +13,7 @@
             "metadata": {
                 "description" : "Any non-empty value is accepted. After the package is published, this parameter will be used to link the application install to the details about the application in the marketplace."
             },
-            "defaultValue": "Spark2.0"
+            "defaultValue": "Spark2"
         },
         "edgeNodeSize": {
             "type": "string",
@@ -29,7 +29,7 @@
     },
     "variables": {
         "clusterApiVersion": "2015-03-01-preview",
-        "applicationName": "Spark2.0"
+        "applicationName": "Spark2"
     },
     "resources": [{
         "name": "[concat(parameters('clusterName'),'/', variables('applicationName'))]",
@@ -47,12 +47,12 @@
                 }]
             },
             "installScriptActions": [{
-                "name": "[concat('spark2.0-install-v0','-' ,uniquestring(variables('applicationName')))]",
+                "name": "[concat('spark2-install-v0','-' ,uniquestring(variables('applicationName')))]",
                 "uri": "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/spark2.0-sidebyside-hdinsight.sh",
                 "roles": ["headnode","workernode","edgenode"]
             }],
             "uninstallScriptActions": [{
-                "name": "[concat('spark2.0-uninstall-v0','-' ,uniquestring(variables('applicationName')))]",
+                "name": "[concat('spark2-uninstall-v0','-' ,uniquestring(variables('applicationName')))]",
                 "uri": "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/uninstall-spark-sidebyside-hdinisght.sh",
                 "roles": ["headnode","workernode","edgenode"]
             }],
