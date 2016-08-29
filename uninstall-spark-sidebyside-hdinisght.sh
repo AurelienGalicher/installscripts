@@ -11,8 +11,8 @@ SPARK2_DIR="$CURRENT_DIR/spark-client2"
 
 ## Download & Install Binary
 cd "/tmp"
-sudo rm -r $newspark.tgz
-sudo rm -r $newspark
+#sudo rm -r $newspark.tgz
+#sudo rm -r $newspark
 sudo rm -r $SPARK2_DIR
 sudo unlink "$HADOOP_DIR/lib/spark-yarn-shuffle.jar"
 sudo unlink  /usr/hdp/current/hadoop
