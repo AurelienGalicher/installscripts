@@ -11,7 +11,10 @@ SPARK2_DIR="$CURRENT_DIR/spark-client2"
 
 ## Download & Install Binary
 cd "/tmp"
-curl "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz" | tar xzf -
+rm -r $newspark.tgz
+rm -r $newspark
+wget "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz"
+tar -xvf $newspark.tgz
 cd "$newspark"
 rm "jars/hadoop*" 
 sudo mkdir $SPARK2_DIR 
