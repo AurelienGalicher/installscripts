@@ -20,6 +20,10 @@ rm $newspark.tgz
 cd "$newspark"
 rm -r jars/hadoop* 
 #sudo mkdir $SPARK2_DIR 
+cd conf
+wget "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/spark-env.sh"
+wget "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/spark-defaults.conf"
+
 sudo mv "/tmp/$newspark" "$SPARK2_DIR"
 
 
