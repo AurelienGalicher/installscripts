@@ -13,10 +13,12 @@ SPARK2_DIR="$CURRENT_DIR/spark-client2"
 cd "/tmp"
 sudo rm -r $newspark.tgz
 sudo rm -r $newspark
+sudo rm -r $SPARK2_DIR
 wget "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz"
 tar -xvf $newspark.tgz
 cd "$newspark"
-rm "jars/hadoop*" 
+ls hadoop*
+rm jars/hadoop* 
 sudo mkdir $SPARK2_DIR 
 sudo mv "$newspark" "$SPARK2_DIR"
 
