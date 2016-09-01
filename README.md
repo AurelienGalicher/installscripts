@@ -14,19 +14,11 @@ Installation guide:
   <ul>
   <li> launch a spark-shell</li>
   <li> launch the SparkPI example:
-		 
-		 <p>spark-submit --class org.apache.spark.examples.SparkPi \
-    	--master yarn \
-    	--deploy-mode client \
-    	--driver-memory 4g \
-    	--executor-memory 2g \
-    	--executor-cores 1 \
-    	--queue thequeue \
-    	$SPARK_HOME/examples/jars/spark-examples*.jar \
-    	10
+	<p>
+	spark-submit --class org.apache.spark.examples.SparkPi  --master yarn  --deploy-mode client  --driver-memory 4g  --executor-memory 2g  --executor-cores 1  --queue default  $SPARK_HOME/examples/jars/spark-ex*.jar 10
     	</p>
     </li>
-    </ul>
+   </ul>
 </li>
 </ul>
 </p>
