@@ -23,7 +23,7 @@ rm -r jars/hadoop*
 cd conf
 wget "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/spark-env.sh"
 wget "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/spark-defaults.conf"
-
+sudo cp $SPARK_CONF_DIR/hive-site.xml
 sudo mv "/tmp/$newspark" "$SPARK2_DIR"
 
 
