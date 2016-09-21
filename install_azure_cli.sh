@@ -13,4 +13,5 @@ echo '. <(azure --completion)' >> .zshrc
 echo "export AZURE_STORAGE_ACCOUNT=<storage_account_name>" >> ~/.zshrc
 echo "export AZURE_STORAGE_ACCESS_KEY=<storage_account_key>" >> ~/.zshrc
 
+sudo pip install azure
 
