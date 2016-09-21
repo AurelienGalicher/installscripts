@@ -17,8 +17,9 @@ wget https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh
 bash Anaconda3-4.1.1-Linux-x86_64.sh -b
 echo "export PATH=/home/srvadmin/anaconda3/bin:$PATH" >> ~/.zshrc
 export PATH=/home/srvadmin/anaconda3/bin:$PATH
-conda install azure -b
-sudo pip install azure
-sudo pip install redis
+#conda install azure -b
+conda install -c conda-forge azure-storage=0.32.0
+#sudo pip install azure
+#sudo pip install redis
 
 
