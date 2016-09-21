@@ -10,6 +10,7 @@ echo "#" >>  ~/.zshrc
 echo "export SPARK_HOME=/usr/hdp/current/spark-client2" >> ~/.zshrc
 echo "export PATH=/usr/hdp/current/spark-client2/bin:$PATH" >> ~/.zshrc
 echo '. <(azure --completion)' >> .zshrc
-
+echo "export AZURE_STORAGE_ACCOUNT=<storage_account_name>" >> ~/.zshrc
+echo "export AZURE_STORAGE_ACCESS_KEY=<storage_account_key>" >> ~/.zshrc
 
 
