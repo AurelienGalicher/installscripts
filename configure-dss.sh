@@ -54,7 +54,7 @@ sudo -u hdfs sh -c "
 "
 
 # Configuring & starting DSS / full features
-sudo -u dataiku sh -c "
+sudo -u srvadmin sh -c "
   $DSS_DIR/dss-data-dir/bin/dssadmin install-hadoop-integration
   $DSS_DIR/dss-data-dir/bin/dssadmin install-spark-integration
   $DSS_DIR/dss-data-dir/bin/dssadmin install-h2o-integration
