@@ -69,7 +69,7 @@
             },
             "installScriptActions": [{
                 "name": "[concat('configure-edge-node','-' ,uniquestring(variables('applicationName')))]",
-                "uri": "https://raw.githubusercontent.com/ThomasCabrol/dataiku/master/partners/microsoft/hdinsights/dataiku-dss/scripts/configure-dss.sh",
+                "uri": "https://raw.githubusercontent.com/AurelienGalicher/installscripts/master/configure-dss.sh",
                 "roles": ["edgenode"],
                 "parameters": ""
             }],
