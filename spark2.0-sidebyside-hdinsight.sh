@@ -1,6 +1,7 @@
 #!/bin/bash
 
-newspark="spark-2.0.0-bin-hadoop2.7"
+#newspark="spark-2.0.0-bin-hadoop2.7"
+newspark = "spark-2.0.1-bin-hadoop2.7"
 
 SPARK_DIR="$(readlink -f "/usr/hdp/current/spark-client")"
 SPARK_CONF_DIR="$(readlink -f "/usr/hdp/current/spark-client/conf")"
