@@ -15,7 +15,7 @@ cd "/tmp"
 sudo rm -r $newspark.tgz
 sudo rm -r $newspark
 sudo rm -r $SPARK2_DIR
-wget "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz"
+wget "https://www.apache.org/dist/spark/spark-2.0.1/$newspark.tgz"
 tar -xvf $newspark.tgz
 rm $newspark.tgz
 cd "$newspark"
